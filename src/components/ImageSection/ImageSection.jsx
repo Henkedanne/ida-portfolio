@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchData } from '../../utils/utils';
 import { URL } from '../../domain/urls';
+import Slider from 'react-slick';
 import '../../css/image-section.css';
 
 class ImageSection extends Component {
@@ -20,6 +21,14 @@ class ImageSection extends Component {
     render() {
         const { data } = this.state;
         
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+
         if (!data) {
             return false;
         }
@@ -29,11 +38,20 @@ class ImageSection extends Component {
         console.log(imgArr);
 
         // Use react-slick!!
-        
+
         return (
             <section className="image-section">
                 <div className="image-section__container">
-                    <img className="image-section__image" src={imgSrc} alt=""/>
+                    <Slider {...settings}>
+                        {imgArr.map((img) => {
+                            return (
+                                <div>
+                                    <img className="image-section__image" src={img} alt=""/>
+                                </div>
+                            )
+                        })}
+                    </Slider>
+                    {/* <img className="image-section__image" src={imgSrc} alt=""/> */}
                 </div>
             </section>
         )
