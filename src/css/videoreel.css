@@ -1,0 +1,14 @@
+.videoreel {
+    margin: 5em auto;
+}
+
+.videoreel__container {
+    margin: 0 5em;
+    padding: 5em;
+}
+
+.videoreel__video {
+    width: 100%;
+    
+    box-shadow: 15px 15px 0 pink;
+}

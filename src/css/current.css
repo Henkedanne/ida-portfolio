@@ -1,0 +1,30 @@
+.current {
+    margin: 0 auto;
+}
+
+.current__container {
+    position: relative;
+    margin: 5em 20%;
+}
+
+.current__container:before {
+    position: absolute;
+    content: '';
+    top: -150px;
+    left: 50%;
+    height: 100px;
+    width: 5px;
+    background: yellow;
+
+}
+
+.current__container-title {
+    text-align: center;
+    font-size: 60px;
+}
+
+.current__container-text {
+    font-size: 24px;
+}
+
+

@@ -1,0 +1,15 @@
+.image-section {
+    margin: 5em auto;
+    background: #999;
+}
+
+.image-section__container {
+    margin: 0 5em;
+    padding: 5em;
+}
+
+.image-section__image {
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 15px 15px 0 yellow;
+}
