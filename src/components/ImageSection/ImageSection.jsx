@@ -8,7 +8,16 @@ class ImageSection extends Component {
     constructor(props) {
         super(props) 
 
-        this.state = {}
+        this.state = {
+            data: null,
+            settings: {
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
 
     }
 
@@ -19,25 +28,13 @@ class ImageSection extends Component {
     }
 
     render() {
-        const { data } = this.state;
+        const { data, settings } = this.state;
         
-        const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        }
-
         if (!data) {
             return false;
         }
         
-        const imgSrc = data[1].source_url;
         const imgArr = data.filter((item) => item.media_type === 'image').map((items => items.source_url));
-        console.log(imgArr);
-
-        // Use react-slick!!
 
         return (
             <section className="image-section">
@@ -51,7 +48,6 @@ class ImageSection extends Component {
                             )
                         })}
                     </Slider>
-                    {/* <img className="image-section__image" src={imgSrc} alt=""/> */}
                 </div>
             </section>
         )
