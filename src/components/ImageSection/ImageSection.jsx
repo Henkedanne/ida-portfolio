@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { fetchData } from '../../utils/utils';
 import { URL } from '../../domain/urls';
 import Slider from 'react-slick';
-import '../../css/image-section.css';
 
 class ImageSection extends Component {
     constructor(props) {
@@ -36,7 +35,7 @@ class ImageSection extends Component {
         const imgArr = data.filter((item) => item.media_type === 'image').map((items => items.source_url));
 
         return (
-            <section className="image-section">
+            <section className="main__container main__container--grey">
                 <div className="image-section__container">
                     <Slider {...settings}>
                         {imgArr.map((img) => {

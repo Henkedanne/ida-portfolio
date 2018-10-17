@@ -25,7 +25,7 @@ class About extends Component {
         }
 
         return (
-           <section className="current">
+           <section className="main__container">
             <div className="current__container">
                 <h2 className="current__container-title">{data[0].title.rendered}</h2>
                 <span className="current__container-text" dangerouslySetInnerHTML={setHtml(data[0].content.rendered)}></span>
