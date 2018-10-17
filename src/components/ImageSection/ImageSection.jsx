@@ -18,7 +18,6 @@ class ImageSection extends Component {
                 slidesToScroll: 1
             }
         }
-
     }
 
     componentDidMount() {
