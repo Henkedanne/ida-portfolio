@@ -22,7 +22,12 @@ class Header extends React.Component {
         return (
             <div>
                 <nav className="header__nav">
-                    <span onClick={() => {this.handleClick()}} className="header__nav-burger">burger</span>
+                    <div onClick={() => {this.handleClick()}} className="header__nav-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
                     {this.state.active
                         ? 
                         <div className="header__nav-modal">

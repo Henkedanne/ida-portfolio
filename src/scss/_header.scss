@@ -1,18 +1,45 @@
-.header__nav {
+.header {
     
+    &__nav-burger {
+        position: fixed;
+        margin: 1em;
+        padding: 1em;
+        cursor: pointer;
+        z-index: 10;
+
+        & span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            background: $color-yellow;
+        }
+        & span:nth-child(2) {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            background: $color-yellow;
+        }
+        & span:nth-child(3) {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            background: $color-yellow;
+        }
+    }
+    
+    &__nav-modal {
+        position: fixed;
+        width: 50%;
+        height: 100%;
+        background: yellow;
+        text-align: center;
+        z-index: 5;
+    }
 }
 
-.header__nav-burger {
-    position: fixed;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.header__nav-modal {
-    position: fixed;
-    width: 50%;
-    height: 100%;
-    background: yellow;
-    text-align: center;
-    z-index: 5;
-}
