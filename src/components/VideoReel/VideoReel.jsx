@@ -31,7 +31,7 @@ class VideoReel extends Component {
         const videoSrc = videoItem[0].source_url;
                 console.log(videoItem);
         return (
-            <section className="main__container main__container--grey">
+            <section className="videoreel">
                 <div className="videoreel__container">
                     <video className="videoreel__video" src={videoSrc} alt=""/>
                 </div>

@@ -1,5 +1,5 @@
 .videoreel {
-    margin: 5em auto;
+    @extend %main__background--grey;
 }
 
 .videoreel__container {

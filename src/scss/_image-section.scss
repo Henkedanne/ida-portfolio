@@ -1,6 +1,6 @@
 .image-section {
-    margin: 5em auto;
-    background: #999;
+    @extend %main__background--grey;
+
 }
 
 .image-section__container {

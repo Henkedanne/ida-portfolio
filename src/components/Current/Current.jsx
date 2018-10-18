@@ -27,7 +27,7 @@ class Current extends Component {
         const currentData = data.filter((item) => item.title.rendered === 'Aktuellt')
 
         return (
-            <section className="main__container">
+            <section>
                 <div className="current__container">
                     <h2 className="current__container-title">{currentData[0].title.rendered}</h2>
                     <span className="current__container-text" dangerouslySetInnerHTML={setHtml(currentData[0].content.rendered)}></span>

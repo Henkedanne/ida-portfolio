@@ -35,7 +35,7 @@ class ImageSection extends Component {
         const imgArr = data.filter((item) => item.media_type === 'image').map((items => items.source_url));
 
         return (
-            <section className="main__container main__container--grey">
+            <section className="image-section">
                 <div className="image-section__container">
                     <Slider {...settings}>
                         {imgArr.map((img) => {
