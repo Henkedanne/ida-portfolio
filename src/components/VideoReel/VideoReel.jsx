@@ -15,6 +15,9 @@ class VideoReel extends Component {
 
     componentDidMount() {
         fetchData(URL.MEDIA).then((data) => {
+            if (data.length < 0) {
+                return null
+            }
             this.setState({ data: data })
         });
     }
@@ -22,14 +25,12 @@ class VideoReel extends Component {
     render() {
         const { data } = this.state;
         
-        if (!data) {
+        if (!data || data.length < 0) {
             return null;
         }
         
-        console.log(data);
         const videoItem = data.filter((item) => item.media_type === 'file');
-        const videoSrc = videoItem[0].source_url;
-                console.log(videoItem);
+        const videoSrc = videoItem.length > 0 && videoItem[0].source_url;
         return (
             <section className="videoreel">
                 <div className="videoreel__container">
