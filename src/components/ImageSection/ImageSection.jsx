@@ -38,10 +38,10 @@ class ImageSection extends Component {
             <section className="image-section">
                 <div className="image-section__container">
                     <Slider {...settings}>
-                        {imgArr.map((img) => {
+                        {imgArr.map((img, i) => {
                             return (
                                 <div>
-                                    <img className="image-section__image" src={img} alt=""/>
+                                    <img key={i} className="image-section__image" src={img} alt=""/>
                                 </div>
                             )
                         })}
