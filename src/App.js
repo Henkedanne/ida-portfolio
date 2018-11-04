@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
+import { Hero } from './components/Hero/Hero'
 import Current from './components/Current/Current';
 import ImageSection from './components/ImageSection/ImageSection';
 import About from './components/About/About';
