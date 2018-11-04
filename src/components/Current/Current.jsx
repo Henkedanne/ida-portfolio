@@ -13,6 +13,7 @@ class Current extends Component {
     }
     componentDidMount() {
         fetchData(URL.POST).then((data) => {
+            
             this.setState({ data: data });
         });
     }
@@ -21,11 +22,10 @@ class Current extends Component {
         const { data } = this.state;
         
         if (!data) {
-            return false;
+            return null;
         }
-
         const currentData = data.filter((item) => item.title.rendered === 'Aktuellt')
-
+        
         return (
             <section>
                 <div className="current__container">
