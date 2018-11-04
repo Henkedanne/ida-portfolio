@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchData } from '../../utils/utils';
+import { fetchData, fetchDataOnTag } from '../../utils/utils';
 import { URL } from '../../domain/urls';
 import { setHtml } from '../../utils/utils';
 
@@ -12,14 +12,17 @@ class About extends Component {
     }
 
     componentDidMount() {
-        fetchData(URL.ABOUTPAGE).then((data) => {
+        // fetchData(URL.ABOUTPAGE).then((data) => {
+        //     this.setState({data: data})
+        // })
+        fetchDataOnTag('about').then((data) => {
             this.setState({data: data})
         })
     }
 
     render() {
-        const { data } = this.state;
-
+        const { data, post } = this.state;
+        console.log('data:', data)
         if ( !data ) {
             return null;
         }
@@ -27,7 +30,7 @@ class About extends Component {
         return (
            <section className="main__container">
             <div className="current__container">
-                <h2 className="current__container-title">{data[0].title.rendered}</h2>
+                <h2 className="current__container-title">{data[1].title.rendered}</h2>
                 <span className="current__container-text" dangerouslySetInnerHTML={setHtml(data[0].content.rendered)}></span>
             </div>
         </section>
