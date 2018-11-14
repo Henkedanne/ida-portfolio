@@ -17,11 +17,11 @@ export const fetchDataOnTag = (tagName) => {
     const data = fetchData(URL.POST);
     const tagData = fetchData(URL.TAG)
 
-    return Promise.all([data, tagData]).then((item) => {
+    return Promise.all([data, tagData]).then((items) => {
         
-        const getTagId = item[1].filter((tags) => tags.name === tagName);
+        const getTagId = items[1].filter((tags) => tags.name === tagName);
         
-        return item[0].filter((item) => {
+        return items[0].filter((item) => {
             return item.tags[0] === getTagId[0].id;
         })
     });
