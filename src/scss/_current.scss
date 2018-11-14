@@ -1,12 +1,14 @@
 .current__container {
     position: relative;
-    margin: 5em 20%;
+    padding: 4em 20%;
+    transform: translateZ(0px);
+    background: white;
 }
 
 .current__container:before {
     position: absolute;
     content: '';
-    top: -150px;
+    top: -60px;
     left: 50%;
     height: 100px;
     width: 5px;

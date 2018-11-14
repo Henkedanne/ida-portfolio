@@ -1,6 +1,6 @@
 .image-section {
     @extend %main__background--grey;
-
+    transform: translateZ(0px);
 }
 
 .image-section__container {

@@ -14,8 +14,12 @@ h1, h2 {
     margin: 20px; 
 }
 
-%main__container {
+.main__container {
   margin: 0 auto;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
 
   &--grey {
     background: $color-grey;
@@ -23,6 +27,5 @@ h1, h2 {
 }
 
 %main__background {
-
   &--grey {background: $color-grey};
 }
