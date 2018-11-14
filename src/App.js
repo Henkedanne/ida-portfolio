@@ -13,11 +13,13 @@ class App extends Component {
     	return (
 			<Fragment>
 				<Header />
-				<Hero />
-				<Current />
-				<ImageSection />
-				<About />
-				<VideoReel />
+				<div className="main__container">
+					<Hero />
+					<Current />
+					<ImageSection />
+					<About />
+					<VideoReel />
+				</div>
 			</Fragment>
     	);
   	}
