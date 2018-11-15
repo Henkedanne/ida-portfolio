@@ -20,15 +20,16 @@ class About extends Component {
 
     render() {
         const { data } = this.state;
-        
-        if ( !data ) {
+
+        if (!data) {
             return null;
         }
-
+        const aboutData = data[0];
+        
         return (
             <section className="about__container">
-                <h2 className="section__container--title">{data[1].title.rendered}</h2>
-                <span className="section__container--text" dangerouslySetInnerHTML={setHtml(data[0].content.rendered)}></span>
+                <h2 className="section__container--title">{aboutData.title.rendered}</h2>
+                <span className="section__container--text" dangerouslySetInnerHTML={setHtml(aboutData.content.rendered)}></span>
             </section>
         )
     }
