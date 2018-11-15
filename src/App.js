@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Header from './components/Header/Header'
+import Navigation from './components/Navigation/Navigation'
 import { Hero } from './components/Hero/Hero'
 import Current from './components/Current/Current';
 import ImageSection from './components/ImageSection/ImageSection';
@@ -12,7 +12,7 @@ class App extends Component {
   	render() {
     	return (
 			<Fragment>
-				<Header />
+				<Navigation />
 				<div className="main__container">
 					<Hero />
 					<Current />
