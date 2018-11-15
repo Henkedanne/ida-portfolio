@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { fetchDataOnTag } from '../../utils/utils';
-import { URL } from '../../domain/urls';
 import { setHtml } from '../../utils/utils';
 
 class About extends Component {
@@ -20,8 +19,8 @@ class About extends Component {
     }
 
     render() {
-        const { data, post } = this.state;
-        console.log('data:', data)
+        const { data } = this.state;
+        
         if ( !data ) {
             return null;
         }
