@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { fetchData, fetchDataOnTag } from '../../utils/utils';
+import { fetchDataOnTag } from '../../utils/utils';
 import { URL } from '../../domain/urls';
 import { setHtml } from '../../utils/utils';
-
 
 class About extends Component {
     constructor(props) {
