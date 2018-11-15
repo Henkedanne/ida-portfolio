@@ -1,0 +1,5 @@
+.about__container {
+    @extend %section__container;
+    transform: translateZ(0px);
+
+}

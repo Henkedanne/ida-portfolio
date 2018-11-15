@@ -1,0 +1,25 @@
+%section__container {
+    padding: 4em 20%;
+
+    &--title {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    &--text {
+        font-size: 24px;
+    }
+  }
+
+.section__container {
+    @extend %section__container;
+    
+    &--title {
+        @extend %section__container--title;
+    }
+    
+    &--text {
+        @extend %section__container--text;
+    }
+}
+
