@@ -19,18 +19,21 @@ class Navigation extends React.Component {
     }
 
     render() {
+
+        const burgerClass = this.state.active ? "header__nav-burger header__nav-burger--active" : "header__nav-burger";
+        const modalClass = this.state.active ? "header__nav-modal header__nav-modal--active" : "header__nav-modal";
+
         return (
             <div>
                 <nav className="header__nav">
-                    <div onClick={() => {this.handleClick()}} className="header__nav-burger">
+                    
+                    <div onClick={() => {this.handleClick()}} className={burgerClass}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                     
-                    {this.state.active
-                        ? 
-                        <div className="header__nav-modal">
+                        <div className={modalClass}>
                             <h1>Ida Löfholm</h1>
                             <ul>
                                 <li>About</li>
@@ -39,9 +42,8 @@ class Navigation extends React.Component {
                                 <li>Contact</li>
                             </ul>
                         </div>
-                        :
-                        null
-                    }
+                        
+                    
                 </nav>
             </div>
         );
