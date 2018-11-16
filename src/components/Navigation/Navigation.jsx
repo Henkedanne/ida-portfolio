@@ -26,24 +26,20 @@ class Navigation extends React.Component {
         return (
             <div>
                 <nav className="header__nav">
-                    
                     <div onClick={() => {this.handleClick()}} className={burgerClass}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                    
-                        <div className={modalClass}>
-                            <h1>Ida Löfholm</h1>
-                            <ul>
-                                <li>About</li>
-                                <li>Pictures</li>
-                                <li>Reel</li>
-                                <li>Contact</li>
-                            </ul>
-                        </div>
-                        
-                    
+                    <div className={modalClass}>
+                        <h1>Ida Löfholm</h1>
+                        <ul>
+                            <li>About</li>
+                            <li>Pictures</li>
+                            <li>Reel</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         );
