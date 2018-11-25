@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 export class Hero extends Component {
     render() {
         return (
-            <div className="hero__image-container">
-                <img className="hero__image" src="../../../assets/images/ida_hero.jpg" alt="ida"/>
-            </div>
+            <Fragment>
+                <div className="hero__image-container">
+                    <img className="hero__image" src="../../../assets/images/ida_hero.jpg" alt="ida"/>
+                </div>
+                
+                <h1 className="hero__title">IDA LÖFHOLM</h1>
+            </Fragment>
         )
     }
 }

@@ -21,3 +21,16 @@
     height: 100vh;
     object-fit: cover;
 }
+
+.hero__title {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    text-align: center;
+    font-size: 4em;
+    color: $color-yellow;
+
+    @include mq_gte_medium {
+        display: none;
+    }
+}

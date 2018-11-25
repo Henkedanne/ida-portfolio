@@ -1,0 +1,15 @@
+$mq-breakpoint-min-medium: 450px;
+$mq-breakpoint-min-large: 750px;
+
+@mixin mq_gte_medium {
+    @media only screen and (min-width: $mq-breakpoint-min-medium) {
+        @content;
+    }
+}
+
+@mixin mq_gte_large {
+    @media only screen and (min-width: $mq-breakpoint-min-large) {
+        @content;
+    }
+}
+

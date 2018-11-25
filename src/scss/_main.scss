@@ -9,6 +9,10 @@ h1, h2 {
     font-family: 'Playfair Display', serif;
   }
 
+a {
+  color: $color-black;
+}
+
 .main__data-span {
     display: block;
     margin: 20px; 
