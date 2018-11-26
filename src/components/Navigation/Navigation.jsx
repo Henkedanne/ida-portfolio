@@ -3,31 +3,51 @@ import React from 'react';
 class Navigation extends React.Component {
     constructor(props) {
         super(props)
-
+        
+        this.navRef = React.createRef();
         this.state = {
             active: false
         }
 
+        this.toggleModal = this.toggleModal.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClick, false);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClick, false);
+    }
     
-    handleClick() {
+    toggleModal() {
         this.setState((prevState) => ({
             active: !prevState.active
         }));
-        console.log('clicked', this.state.active)
+    }
+
+    handleClick(e) {
+        if (!this.state.active) {
+            return;
+        }
+
+        if (this.navRef.current.contains(e.target)) {
+            return;
+        }
+        
+        this.toggleModal();
     }
 
     render() {
-
         // Sätter --active när state.active är true.
         const burgerClass = this.state.active ? "header__nav-burger header__nav-burger--active" : "header__nav-burger";
         const modalClass = this.state.active ? "header__nav-modal header__nav-modal--active" : "header__nav-modal";
 
         return (
             <div>
-                <nav className="header__nav">
-                    <div onClick={() => {this.handleClick()}} className={burgerClass}>
+                <nav ref={this.navRef} className="header__nav">
+                    <div onClick={() => {this.toggleModal()}} className={burgerClass}>
                         <span></span>
                         <span></span>
                         <span></span>
