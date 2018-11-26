@@ -4,8 +4,10 @@
 }
 
 .image-section__container {
-    margin: 0 5em;
-    padding: 5em;
+    
+    @include mq_gte_medium {
+        padding: 5em;
+    }
 }
 
 .image-section__image {

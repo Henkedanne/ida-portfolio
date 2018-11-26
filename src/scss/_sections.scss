@@ -1,13 +1,21 @@
 %section__container {
-    padding: 4em 20%;
+    padding: 2em 1em;
+
+    @include mq_gte_medium {
+        padding: 4em 20%;
+    }
 
     &--title {
         text-align: center;
-        font-size: 60px;
+        font-size: 3em;
     }
 
     &--text {
-        font-size: 24px;
+        font-size: 1.25em;
+
+        @include mq_gte_medium {
+            font-size: 1.5em;
+        }
     }
   }
 
