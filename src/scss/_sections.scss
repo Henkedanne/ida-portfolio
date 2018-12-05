@@ -1,8 +1,14 @@
-%section__container {
+%base-section {
     padding: 2em 1em;
-
+    
     @include mq_gte_medium {
-        padding: 4em 20%;
+        padding: 4em 5em;
+       
+    }
+    
+    @include mq_gte_large {
+        padding: 4em 5em;
+       
     }
 
     &--title {
@@ -19,15 +25,25 @@
     }
   }
 
+
 .section__container {
-    @extend %section__container;
+    margin: 0 auto;
+    width: 100%;
+
+    @include mq_gte_medium {
+        max-width: 450px;
+    }
+
+    @include mq_gte_large {
+        max-width: 800px;
+    }
     
     &--title {
-        @extend %section__container--title;
+        @extend %base-section--title;
     }
     
     &--text {
-        @extend %section__container--text;
+        @extend %base-section--text;
     }
 }
 

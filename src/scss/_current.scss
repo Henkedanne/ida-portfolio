@@ -1,12 +1,12 @@
-.current__container {
-    @extend %section__container;
+.current-section {
+    @extend %base-section;
 
     position: relative;
     transform: translateZ(0px);
     background: white;
 }
 
-.current__container:before {
+.current-section:before {
     position: absolute;
     content: '';
     top: -60px;
@@ -16,4 +16,6 @@
     background: $color-yellow;
 }
 
-
+.current-section__container {
+    
+}

@@ -1,0 +1,27 @@
+.contact-section {
+    @extend %base-section;
+    transform: translateZ(0px);
+    background: $color-white;
+}
+
+.contact-form {
+    & label {
+        display: block;
+        margin: 10px 0;
+    }
+
+    &__input--short {
+        width: 100%;
+        height: 30px;
+        font-size: 1em;
+
+        @include mq_gte_medium {
+            max-width: 450px;
+        }
+    }
+
+    &__input--long {
+        width: 100%;
+        font-size: 1em;
+    }
+}

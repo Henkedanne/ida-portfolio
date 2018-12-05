@@ -1,6 +1,10 @@
-.about__container {
-    @extend %section__container;
+.about-section {
+    @extend %base-section;
     transform: translateZ(0px);
     background: $color-white;
+
+    &__container {
+
+    }
 
 }

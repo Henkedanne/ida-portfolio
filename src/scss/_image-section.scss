@@ -5,7 +5,7 @@
 
 .image-section__container {
     
-    @include mq_gte_medium {
+    @include mq_gte_large{
         padding: 5em;
     }
 }

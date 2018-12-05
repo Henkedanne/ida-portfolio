@@ -88,7 +88,7 @@
         background: yellow;
         text-align: center;
         z-index: 5;
-        transition: left 200ms ease;
+        transition: left 200ms ease-in-out;
 
         @include mq_gte_medium {
             width: 50%;
@@ -108,6 +108,7 @@
     &__nav-modal__list{
         list-style: none;
         padding: 0;
+        margin: 40px auto 0 auto;
     }
 
     &__nav-modal__list-item {

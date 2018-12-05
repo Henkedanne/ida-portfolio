@@ -27,9 +27,11 @@ class About extends Component {
         const aboutData = data[0];
         
         return (
-            <section className="about__container">
-                <h2 className="section__container--title">{aboutData.title.rendered}</h2>
-                <span className="section__container--text" dangerouslySetInnerHTML={setHtml(aboutData.content.rendered)}></span>
+            <section className="about-section">
+                <div className="section__container">
+                    <h2 className="section__container--title">{aboutData.title.rendered}</h2>
+                    <span className="section__container--text" dangerouslySetInnerHTML={setHtml(aboutData.content.rendered)}></span>
+                </div>
             </section>
         )
     }

@@ -5,6 +5,7 @@ import Current from './components/Current/Current';
 import ImageSection from './components/ImageSection/ImageSection';
 import About from './components/About/About';
 import VideoReel from './components/VideoReel/VideoReel';
+import Contact from './components/Contact/Contact'
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
 					<ImageSection />
 					<About />
 					<VideoReel />
+					<Contact />
 				</div>
 			</Fragment>
     	);

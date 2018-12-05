@@ -27,9 +27,11 @@ class Current extends Component {
         const currentData = data.filter((item) => item.title.rendered === 'Aktuellt')
         
         return (
-            <section id="current" className="current__container">
-                <h2 className="section__container--title">{currentData[0].title.rendered}</h2>
-                <span className="section__container--text" dangerouslySetInnerHTML={setHtml(currentData[0].content.rendered)}></span>
+            <section id="current" className="current-section">
+                <div className="section__container">
+                    <h2 className="section__container--title">{currentData[0].title.rendered}</h2>
+                    <span className="section__container--text" dangerouslySetInnerHTML={setHtml(currentData[0].content.rendered)}></span>
+                </div>
             </section>
         )
     }

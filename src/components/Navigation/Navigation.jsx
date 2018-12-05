@@ -53,12 +53,12 @@ class Navigation extends React.Component {
                         <span></span>
                     </div>
                     <div className={modalClass}>
-                        <h1 className="header__nav-modal__title">Ida Löfholm</h1>
+                        <a href="#"><h1 className="header__nav-modal__title">Ida Löfholm</h1></a>
                         <ul onClick={() => {this.toggleModal()}} className="header__nav-modal__list">
                             <a href="#"><li className="header__nav-modal__list-item">About</li></a>
                             <a href="#"><li className="header__nav-modal__list-item">Reel</li></a>
                             <a href="#images"><li className="header__nav-modal__list-item">Pictures</li></a>
-                            <a href="#"><li className="header__nav-modal__list-item">Contact</li></a>
+                            <a href="#contact"><li className="header__nav-modal__list-item">Contact</li></a>
                         </ul>
                     </div>
                 </nav>
