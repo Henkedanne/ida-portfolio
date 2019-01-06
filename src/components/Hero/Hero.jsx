@@ -5,7 +5,10 @@ export class Hero extends Component {
         return (
             <Fragment>
                 <div className="hero__image-container">
-                    <img className="hero__image" src="../../../assets/images/ida_hero.jpg" alt="ida"/>
+                    <picture >
+                        <source className="hero__image" media="(max-width: 599px)" srcset="../../../assets/images/ida-small.png" />
+                        <img className="hero__image" src="../../../assets/images/ida-large.png" alt="ida" />
+                    </picture>
                 </div>
                 
                 <h1 className="hero__title">IDA LÖFHOLM</h1>
