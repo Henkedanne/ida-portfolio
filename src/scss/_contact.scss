@@ -14,6 +14,7 @@
         width: 100%;
         height: 30px;
         font-size: 1em;
+        border: 1px solid rgba(0,0,0,0.15);
 
         @include mq_gte_medium {
             max-width: 450px;
@@ -23,5 +24,6 @@
     &__input--long {
         width: 100%;
         font-size: 1em;
+        border: 1px solid rgba(0,0,0,0.15);
     }
 }
