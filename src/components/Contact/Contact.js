@@ -9,15 +9,15 @@ class Contact extends Component {
                     <form className="contact-form" action="">
                         <div>
                             <label>Namn</label>
-                            <input className="contact-form__input--short" type="text" name="namn" id=""/>
+                            <input className="contact-form__input--short" name="namn" tabindex="1" required type="text"/>
                         </div>
                         <div>
                             <label>Email</label>
-                            <input className="contact-form__input--short" type="text"/>
+                            <input className="contact-form__input--short" name="email" tabindex="2" spellcheck="false" required type="email"/>
                         </div>
                         <div>
                             <label>Meddelande</label>
-                            <textarea className="contact-form__input--long" cols="5" rows="10" type="text"/>
+                            <textarea className="contact-form__input--long" name="message" tabindex="3" required cols="4" rows="10" type="message"/>
                         </div>
                         <div>
                             <button>Skicka</button>
